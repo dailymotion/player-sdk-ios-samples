@@ -1,9 +1,5 @@
-#temp
-# bitrise.yml
-# fastlane/Fastfile
 
 ## Build generated
-framework/*
 build/*
 DerivedData
 *.dSYM*
@@ -34,27 +30,5 @@ xcuserdata
 # Packages/
 .build/
 
-# Bundler
-.bundle
-
-# CocoaPods
-Pods/
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-Carthage/Checkouts
-!Carthage/Build
-# Carthage/Build
-
-fastlane/report.xml
-test_output/
-
-Vendors/
-RefreshFeedSpaceHelperTests.swift.plist
-html
-en.xcloc
-node_modules
-package-lock.json
 
 .DS_Store
