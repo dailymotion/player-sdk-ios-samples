@@ -385,17 +385,17 @@ extension ViewController: DMVideoDelegate {
     setQualityButton.isEnabled = true
     self.videoQualitiesArray = qualities
   }
+    
+  func video(_ player: DMPlayerView, didSeekStart time: Double) {
+    logVideoEvent(event: "didSeekStart: \(time)")
+  }
+    
+  func video(_ player: DMPlayerView, didSeekEnd time: Double) {
+    logVideoEvent(event: "didSeekEnd: \(time)")
+  }
   
   func video(_ player: DMPlayerView, didChangeQuality quality: String) {
     logVideoEvent(event: "Quality Changed: \(quality)")
-  }
-  
-  func video(_ player: DMPlayerView, didSeek time: Double) {
-    logVideoEvent(event: "Did Seek: \(time)")
-  }
-  
-  func video(_ player: DMPlayerView, isSeeking time: Double) {
-    logVideoEvent(event: "Is Seeking: \(time)")
   }
   
   func videoDidStart(_ player: DMPlayerView){
