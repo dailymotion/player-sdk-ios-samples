@@ -86,7 +86,8 @@ class ViewController: UIViewController {
     self.createPlayerStatusLabel.text = "Player Loading..."
     
     // Add additional customisation to the player by using DMPlayerParameters struct
-    let playerParams = DMPlayerParameters(mute: false)
+    var playerParams = DMPlayerParameters(mute: false)
+    playerParams.customConfig = ["customParams":"test/value=1234"]
     // Using Dailymotion singleton instance in order to create the player
     // In order to get all the functionalities like fullscreen, ad support and open url pass and implement player delegate to the initialisation as bellow or after initialisation using playerView.playerDelegate = self
     Dailymotion.createPlayer(playerId: ViewController.testPlayerId, videoId: ViewController.testVideoId, playerParameters: playerParams , playerDelegate: self, videoDelegate: self, adDelegate: self) { [weak self] playerView, error in
@@ -247,19 +248,8 @@ class ViewController: UIViewController {
   }
   
   @IBAction func setCustomConfigBtnPressed(_ sender: Any) {
-    showInputDialog(title: "Ads config",
-                    subtitle: "Enter ads config",
-                    actionTitle: "OK",
-                    cancelTitle: "Cancel",
-                    inputPlaceholder: "Ads config",
-                    inputKeyboardType: .default, actionHandler:
-                      {[weak self] (input: String?) in
-      guard let stringValue = input else {
-        return
-      }
-      
-      self?.playerView?.setCustomConfig(config: stringValue)
-    })
+    let customConfigDict = ["customParams":"test/value=1234", "newKey":"newValue"]
+    self.playerView?.setCustomConfig(config: customConfigDict)
   }
   
   @IBAction func setFullscreenBtnPressed(_ sender: Any) {
