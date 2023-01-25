@@ -18,8 +18,6 @@ class ViewController: UIViewController {
   @IBOutlet weak var createPlayerButton: UIButton!
   
   var playerView: DMPlayerView?
-  static let testPlayerId = "x8w3s"
-  static let testVideoId = "x84sh87"
   
   
   override func viewDidLoad() {
@@ -48,7 +46,8 @@ class ViewController: UIViewController {
     let playerParams = DMPlayerParameters(mute: false)
     // Using Dailymotion singleton instance in order to create the player
     // In order to get all the functionalities like fullscreen, ad support and open url pass and implement player delegate to the initialisation as bellow or after initialisation using playerView.playerDelegate = self
-    Dailymotion.createPlayer(playerId: ViewController.testPlayerId, videoId: ViewController.testVideoId, playerParameters: playerParams , playerDelegate: self) { [weak self] playerView, error in
+    // Add your player ID that was created in Dailymotion Partner HQ
+    Dailymotion.createPlayer(playerId: <#PlayerId ex: "x8w3s"#>, videoId: <#VideoId ex: "x84sh87"#>, playerParameters: playerParams , playerDelegate: self) { [weak self] playerView, error in
       // Wait for Player initialisation and check if self is still allocated
       guard let self = self else {
         return
