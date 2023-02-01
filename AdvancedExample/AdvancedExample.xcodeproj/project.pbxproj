@@ -13,7 +13,7 @@
 		540B1EB5283268C2008DB71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540B1EB3283268C2008DB71C /* Main.storyboard */; };
 		540B1EB7283268C7008DB71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 540B1EB6283268C7008DB71C /* Assets.xcassets */; };
 		540B1EBA283268C7008DB71C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540B1EB8283268C7008DB71C /* LaunchScreen.storyboard */; };
-		5454B3D128CA13B20028ED95 /* DailymotionPlayerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 5454B3D028CA13B20028ED95 /* DailymotionPlayerSDK */; };
+		545901392989246C007D584F /* DailymotionPlayerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 545901382989246C007D584F /* DailymotionPlayerSDK */; };
 		54A4E9E92844F29E00F1A372 /* McPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A4E9E42844F29D00F1A372 /* McPicker.swift */; };
 		54A4E9EA2844F29E00F1A372 /* McPickerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A4E9E52844F29E00F1A372 /* McPickerBarButtonItem.swift */; };
 		54A4E9EB2844F29E00F1A372 /* McTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A4E9E62844F29E00F1A372 /* McTextField.swift */; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5454B3D128CA13B20028ED95 /* DailymotionPlayerSDK in Frameworks */,
+				545901392989246C007D584F /* DailymotionPlayerSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +132,7 @@
 			);
 			name = AdvancedExample;
 			packageProductDependencies = (
-				5454B3D028CA13B20028ED95 /* DailymotionPlayerSDK */,
+				545901382989246C007D584F /* DailymotionPlayerSDK */,
 			);
 			productName = AdvancedExample;
 			productReference = 540B1EAA283268C2008DB71C /* AdvancedExample.app */;
@@ -163,7 +163,7 @@
 			);
 			mainGroup = 540B1EA1283268C2008DB71C;
 			packageReferences = (
-				5454B3CF28CA13B20028ED95 /* XCRemoteSwiftPackageReference "player-sdk-ios" */,
+				545901372989246C007D584F /* XCRemoteSwiftPackageReference "player-sdk-ios" */,
 			);
 			productRefGroup = 540B1EAB283268C2008DB71C /* Products */;
 			projectDirPath = "";
@@ -425,9 +425,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5454B3CF28CA13B20028ED95 /* XCRemoteSwiftPackageReference "player-sdk-ios" */ = {
+		545901372989246C007D584F /* XCRemoteSwiftPackageReference "player-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dailymotion/player-sdk-ios";
+			repositoryURL = "https://github.com/dailymotion/player-sdk-ios.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -436,9 +436,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5454B3D028CA13B20028ED95 /* DailymotionPlayerSDK */ = {
+		545901382989246C007D584F /* DailymotionPlayerSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5454B3CF28CA13B20028ED95 /* XCRemoteSwiftPackageReference "player-sdk-ios" */;
+			package = 545901372989246C007D584F /* XCRemoteSwiftPackageReference "player-sdk-ios" */;
 			productName = DailymotionPlayerSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

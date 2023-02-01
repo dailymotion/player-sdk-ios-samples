@@ -99,7 +99,7 @@ class ViewController: UIViewController {
       if let error = error {
         self.createPlayerButton.isHidden = false
         self.createPlayerStatusLabel.text = error.localizedDescription
-        self.logPlayerEvent(event: "Error creating player \(error)")
+        self.handlePlayerError(error: error)
       } else {
         self.createPlayerStatusLabel.isHidden = true
         self.createPlayerStackView.isHidden = true
@@ -113,6 +113,8 @@ class ViewController: UIViewController {
       }
     }
   }
+  
+  
   
   private func setupPlayerLogsTextView() {
     playerEventsLogsTextView.text = ""
@@ -135,6 +137,44 @@ class ViewController: UIViewController {
     ]
     // Activate created constraints
     NSLayoutConstraint.activate(constraints)
+  }
+  
+  func handlePlayerError(error: Error) {
+    switch(error) {
+      case PlayerError.advertisingModuleMissing :
+        break;
+      case PlayerError.stateNotAvailable :
+        break;
+      case PlayerError.underlyingRemoteError(error: let error):
+        let error = error as NSError
+        if let errDescription = error.userInfo[NSLocalizedDescriptionKey],
+           let errCode = error.userInfo[NSLocalizedFailureReasonErrorKey],
+           let recovery = error.userInfo[NSLocalizedRecoverySuggestionErrorKey] {
+          logPlayerEvent(event: "Player Error : Description: \(errDescription), Code: \(errCode), Recovery : \(recovery) ")
+          
+        } else {
+          logPlayerEvent(event: "Player Error : \(error)")
+        }
+        break
+      case PlayerError.requestTimedOut:
+        self.logPlayerEvent(event: error.localizedDescription)
+        break
+      case PlayerError.unexpected:
+        self.logPlayerEvent(event: error.localizedDescription)
+        break
+      case PlayerError.internetNotConnected:
+        self.logPlayerEvent(event: error.localizedDescription)
+        break
+      case PlayerError.playerIdNotFound:
+        self.logPlayerEvent(event: error.localizedDescription)
+        break
+      case PlayerError.otherPlayerRequestError:
+        self.logPlayerEvent(event: error.localizedDescription)
+        break
+      default:
+        self.logPlayerEvent(event: error.localizedDescription)
+        break
+    }
   }
   
   private func enablePlayerControls() {
@@ -279,7 +319,7 @@ extension ViewController: DMPlayerDelegate {
   }
   
   func player(_ player: DMPlayerView, didFailWithError error: Error) {
-    logPlayerEvent(event: "Did Failed With Error: \(error.localizedDescription)")
+    self.handlePlayerError(error: error)
   }
   
   func player(_ player: DMPlayerView, didChangeControls isVisible: Bool) {

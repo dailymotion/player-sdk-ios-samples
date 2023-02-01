@@ -57,6 +57,7 @@ class ViewController: UIViewController {
       if let error = error {
         self.createPlayerButton.isHidden = false
         self.createPlayerStatusLabel.text = error.localizedDescription
+        self.handlePlayerError(error: error)
       } else {
         
         // Since playerView is optional because of a possible error it must be unwrapped first
@@ -82,6 +83,44 @@ class ViewController: UIViewController {
     ]
     // Activate created constraints
     NSLayoutConstraint.activate(constraints)
+  }
+  
+  func handlePlayerError(error: Error) {
+    switch(error) {
+    case PlayerError.advertisingModuleMissing :
+      break;
+    case PlayerError.stateNotAvailable :
+      break;
+    case PlayerError.underlyingRemoteError(error: let error):
+      let error = error as NSError
+      if let errDescription = error.userInfo[NSLocalizedDescriptionKey],
+         let errCode = error.userInfo[NSLocalizedFailureReasonErrorKey],
+         let recovery = error.userInfo[NSLocalizedRecoverySuggestionErrorKey] {
+        print("Player Error : Description: \(errDescription), Code: \(errCode), Recovery : \(recovery) ")
+        
+      } else {
+        print("Player Error : \(error)")
+      }
+      break
+    case PlayerError.requestTimedOut:
+      print(error.localizedDescription)
+      break
+    case PlayerError.unexpected:
+      print(error.localizedDescription)
+      break
+    case PlayerError.internetNotConnected:
+      print(error.localizedDescription)
+      break
+    case PlayerError.playerIdNotFound:
+      print(error.localizedDescription)
+      break
+    case PlayerError.otherPlayerRequestError:
+      print(error.localizedDescription)
+      break
+    default:
+      print(error.localizedDescription)
+      break
+    }
   }
 }
 
