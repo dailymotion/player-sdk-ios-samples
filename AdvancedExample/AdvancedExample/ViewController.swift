@@ -26,8 +26,6 @@ class ViewController: UIViewController {
   @IBOutlet weak var muteButton: UIButton!
   @IBOutlet weak var unMuteButton: UIButton!
   @IBOutlet weak var setSubtitleButton: UIButton!
-  @IBOutlet weak var showControlsButton: UIButton!
-  @IBOutlet weak var hideControlsButton: UIButton!
   @IBOutlet weak var setScaleButton: UIButton!
   @IBOutlet weak var seekToButton: UIButton!
   @IBOutlet weak var setQualityButton: UIButton!
@@ -64,8 +62,6 @@ class ViewController: UIViewController {
     self.muteButton.isEnabled = false
     self.unMuteButton.isEnabled = false
     self.setSubtitleButton.isEnabled = false
-    self.showControlsButton.isEnabled = false
-    self.hideControlsButton.isEnabled = false
     self.setScaleButton.isEnabled = false
     self.seekToButton.isEnabled = false
     self.setQualityButton.isEnabled = false
@@ -89,7 +85,7 @@ class ViewController: UIViewController {
     // Using Dailymotion singleton instance in order to create the player
     // In order to get all the functionalities like fullscreen, ad support and open url pass and implement player delegate to the initialisation as bellow or after initialisation using playerView.playerDelegate = self
     // Add your player ID that was created in Dailymotion Partner HQ
-    Dailymotion.createPlayer(playerId: <#"xbzlf"#>, videoId: <#"x84sh87"#>, playerParameters: playerParams , playerDelegate: self, videoDelegate: self, adDelegate: self) { [weak self] playerView, error in
+    Dailymotion.createPlayer(playerId: <#PlayerId ex: "x8w3s"#>, videoId: <#VideoId ex: "x84sh87"#>, playerParameters: playerParams , playerDelegate: self, videoDelegate: self, adDelegate: self) { [weak self] playerView, error in
       // Wait for Player initialisation and check if self is still allocated
       guard let self = self else {
         return
@@ -183,8 +179,6 @@ class ViewController: UIViewController {
     self.pauseButton.isEnabled = true
     self.muteButton.isEnabled = true
     self.unMuteButton.isEnabled = true
-    self.showControlsButton.isEnabled = true
-    self.hideControlsButton.isEnabled = true
     self.setScaleButton.isEnabled = true
     self.seekToButton.isEnabled = true
     self.setCustomConfigButton.isEnabled = true
@@ -229,14 +223,6 @@ class ViewController: UIViewController {
         self?.playerView?.setSubtitles(code: captionSelected)
       }
     }
-  }
-  
-  @IBAction func showVideoControlsBtnPressed(_ sender: Any) {
-    playerView?.setControls(visible: true)
-  }
-  
-  @IBAction func hideVideoControlsBtnPressed(_ sender: Any) {
-    playerView?.setControls(visible: false)
   }
   
   @IBAction func setVideoScaleBtnPressed(_ sender: UIButton) {
@@ -320,10 +306,6 @@ extension ViewController: DMPlayerDelegate {
   
   func player(_ player: DMPlayerView, didFailWithError error: Error) {
     self.handlePlayerError(error: error)
-  }
-  
-  func player(_ player: DMPlayerView, didChangeControls isVisible: Bool) {
-    logPlayerEvent(event: "Control Changed, visible: \(isVisible)")
   }
   
   func playerDidStart(_ player: DMPlayerView) {
