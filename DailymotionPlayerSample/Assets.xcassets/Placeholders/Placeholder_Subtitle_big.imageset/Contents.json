@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Subtitle_big.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
