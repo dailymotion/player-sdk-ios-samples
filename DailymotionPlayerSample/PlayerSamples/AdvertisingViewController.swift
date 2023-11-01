@@ -109,7 +109,7 @@ class AdvertisingViewController: DailymotionBaseViewController {
 }
 
 extension AdvertisingViewController: DMPlayerDelegate {
-    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController {
+    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController? {
         return self
     }
     

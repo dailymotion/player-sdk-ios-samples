@@ -125,7 +125,7 @@ class PlayerMethodsViewController: DailymotionBaseViewController {
 }
 
 extension PlayerMethodsViewController: DMPlayerDelegate {
-    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController {
+    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController? {
         return self
     }
     

@@ -102,7 +102,7 @@ class LivePlayerViewController: DailymotionBaseViewController {
 }
 
 extension LivePlayerViewController: DMPlayerDelegate {
-    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController {
+    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController? {
         return self
     }
     

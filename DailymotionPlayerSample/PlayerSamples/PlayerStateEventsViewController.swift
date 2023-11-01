@@ -167,7 +167,7 @@ class PlayerStateEventsViewController: DailymotionBaseViewController {
 }
 // MARK: DMPlayerDelegate
 extension PlayerStateEventsViewController: DMPlayerDelegate {
-    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController {
+    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController? {
         addPlayerEvent(event: "playerWillPresentFullscreenViewController")
         return self
     }

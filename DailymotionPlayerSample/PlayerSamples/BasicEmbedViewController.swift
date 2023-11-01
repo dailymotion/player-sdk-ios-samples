@@ -102,7 +102,7 @@ class BasicEmbedViewController: DailymotionBaseViewController {
 }
 
 extension BasicEmbedViewController: DMPlayerDelegate {
-    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController {
+    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController? {
         return self
     }
     

@@ -103,7 +103,7 @@ class VerticalPlayerViewController: DailymotionBaseViewController {
 }
 
 extension VerticalPlayerViewController: DMPlayerDelegate {
-    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController {
+    func playerWillPresentFullscreenViewController(_ player: DailymotionPlayerSDK.DMPlayerView) -> UIViewController? {
         return self
     }
     
