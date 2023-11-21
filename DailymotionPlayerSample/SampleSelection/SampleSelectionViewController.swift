@@ -21,7 +21,7 @@ class SampleSelectionViewController: DailymotionBaseViewController {
     
     func setupView() {
         let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-        appVersionLabel.text = "App v\(buildNumber)"
+        appVersionLabel.text = "App v\(buildNumber)_alpha"
         SDKVersionLabel.text = "SDK v\(DailymotionPlayer.sdkVersion)"
         overrideUserInterfaceStyle = .light
         title = NSLocalizedString("SampleScreenSelectionTitle", comment: "")
