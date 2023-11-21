@@ -14,6 +14,11 @@ class SampleSelectionViewController: DailymotionBaseViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        appDelegate?.isCastControlBarsEnabled = true
+    }
+    
     func setupView() {
         let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
         appVersionLabel.text = "App v\(buildNumber)"

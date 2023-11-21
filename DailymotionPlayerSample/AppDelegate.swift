@@ -1,8 +1,39 @@
 import UIKit
 import DailymotionPlayerSDK
+import GoogleCast
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    fileprivate var useCastContainerViewController = false
+    var window: UIWindow?
+    
+    var isCastControlBarsEnabled: Bool {
+      get {
+        if useCastContainerViewController {
+          let castContainerVC = (window?.rootViewController as? GCKUICastContainerViewController)
+          return castContainerVC!.miniMediaControlsItemEnabled
+        } else {
+          let rootContainerVC = (window?.rootViewController as? RootContainerViewController)
+          return rootContainerVC!.miniMediaControlsViewEnabled
+        }
+      }
+      set(notificationsEnabled) {
+        guard let windowScene = UIApplication.shared.connectedScenes.filter({ $0.activationState
+          == .foregroundActive }).first as? UIWindowScene,
+              let window = windowScene.windows.first else {
+          return
+        }
+        if useCastContainerViewController {
+          var castContainerVC: GCKUICastContainerViewController?
+          castContainerVC = (window.rootViewController as? GCKUICastContainerViewController)
+          castContainerVC?.miniMediaControlsItemEnabled = notificationsEnabled
+        } else {
+          var rootContainerVC: RootContainerViewController?
+          rootContainerVC = (window.rootViewController as? RootContainerViewController)
+          rootContainerVC?.miniMediaControlsViewEnabled = notificationsEnabled
+        }
+      }
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

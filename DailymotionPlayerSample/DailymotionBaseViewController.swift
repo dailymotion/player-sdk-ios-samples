@@ -9,7 +9,7 @@ import UIKit
 import GoogleCast
 
 class DailymotionBaseViewController: UIViewController {
-
+    let appDelegate = (UIApplication.shared.delegate as? AppDelegate) 
     override func viewDidLoad() {
         super.viewDidLoad()
         addCastButton()

@@ -36,6 +36,7 @@
 		54B6B8FB2AA0A80B0041BE87 /* ABCFavorit-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54B6B8F52AA0A80B0041BE87 /* ABCFavorit-Medium.otf */; };
 		54B6B8FC2AA0A80B0041BE87 /* ABCFavoritMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54B6B8F62AA0A80B0041BE87 /* ABCFavoritMono-Regular.otf */; };
 		54B6B8FF2AA0A8DB0041BE87 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6B8FE2AA0A8DB0041BE87 /* FontUtils.swift */; };
+		54E0E4D02B0CBCDF00F2E979 /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E0E4CF2B0CBCDF00F2E979 /* RootContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,9 @@
 		54B6B8F52AA0A80B0041BE87 /* ABCFavorit-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABCFavorit-Medium.otf"; sourceTree = "<group>"; };
 		54B6B8F62AA0A80B0041BE87 /* ABCFavoritMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABCFavoritMono-Regular.otf"; sourceTree = "<group>"; };
 		54B6B8FE2AA0A8DB0041BE87 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		54E0E4CF2B0CBCDF00F2E979 /* RootContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
+		54E0E4D12B0CD71E00F2E979 /* DailymotionPlayerSampleDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailymotionPlayerSampleDebug.entitlements; sourceTree = "<group>"; };
+		54E0E4D22B0CD75200F2E979 /* DailymotionPlayerSampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailymotionPlayerSampleRelease.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		549E90282A9F253E00DE98F7 /* DailymotionPlayerSample */ = {
 			isa = PBXGroup;
 			children = (
+				54E0E4D22B0CD75200F2E979 /* DailymotionPlayerSampleRelease.entitlements */,
+				54E0E4D12B0CD71E00F2E979 /* DailymotionPlayerSampleDebug.entitlements */,
 				54B6B8F02AA0A7280041BE87 /* Fonts */,
 				54B6B8EC2AA084940041BE87 /* PlayerSamples */,
 				54B522E32A9F415300861947 /* IDFARequest */,
@@ -116,6 +122,7 @@
 				549E90372A9F254000DE98F7 /* Info.plist */,
 				5412FE8D2AA1C6DA00A41D62 /* MainNavigationController.swift */,
 				5412FE8F2AA1D9DB00A41D62 /* DailymotionBaseViewController.swift */,
+				54E0E4CF2B0CBCDF00F2E979 /* RootContainerViewController.swift */,
 			);
 			path = DailymotionPlayerSample;
 			sourceTree = "<group>";
@@ -295,6 +302,7 @@
 				549E902C2A9F253E00DE98F7 /* SceneDelegate.swift in Sources */,
 				5412FE8E2AA1C6DA00A41D62 /* MainNavigationController.swift in Sources */,
 				54B6B8EF2AA084C60041BE87 /* BasicEmbedViewController.swift in Sources */,
+				54E0E4D02B0CBCDF00F2E979 /* RootContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailymotionPlayerSample/DailymotionPlayerSampleDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2QS9CREZT2;
@@ -457,19 +466,22 @@
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "${PRODUCT_NAME} uses the bluetooth to discover Cast-enabled devices around you.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dailymotion.sample.player.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailymotion.sample.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -485,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailymotionPlayerSample/DailymotionPlayerSampleRelease.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -494,12 +507,15 @@
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "${PRODUCT_NAME} uses the bluetooth to discover Cast-enabled devices around you.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
