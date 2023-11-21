@@ -1,4 +1,5 @@
 import UIKit
+import DailymotionPlayerSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         
         UINavigationBar.appearance().titleTextAttributes = attrs
+        Dailymotion.setupDailymotionChromecast()
         return true
     }
     

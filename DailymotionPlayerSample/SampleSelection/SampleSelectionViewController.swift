@@ -25,9 +25,10 @@ class SampleSelectionViewController: DailymotionBaseViewController {
         tableView.register(UINib(nibName: SampleSelectionHeaderFooterView.headerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: SampleSelectionHeaderFooterView.headerIdentifier)
         tableView.register(UINib(nibName: SampleSelectionTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: SampleSelectionTableViewCell.cellIdentifier)
         tableView.separatorStyle = .none
-        
         tableView.reloadData()
     }
+  
+  
     
 }
 

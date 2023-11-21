@@ -547,8 +547,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dailymotion/player-sdk-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = alpha;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
