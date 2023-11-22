@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
       }
     }
+  
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -43,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         
         UINavigationBar.appearance().titleTextAttributes = attrs
+        AppDelegate.customizeChromeCastControllersAppearance()
         Dailymotion.setupDailymotionChromecast()
         return true
     }
@@ -60,5 +62,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+  
+  private static func customizeChromeCastControllersAppearance() {
+    // Get the shared instance of GCKUIStyle
+    let castStyle = GCKUIStyle.sharedInstance()
+    
+    // Set the property of the desired cast Views.
+    // Navigation bar buttons style
+    castStyle.castViews.deviceControl.connectionController.navigation.buttonTextColor = .black
+    
+    // Tool bar style
+    castStyle.castViews.deviceControl.connectionController.toolbar.backgroundColor = .white
+    castStyle.castViews.deviceControl.connectionController.toolbar.buttonTextColor = .black
+    
+    // Connection controller style
+    castStyle.castViews.deviceControl.connectionController.backgroundColor = .white
+    castStyle.castViews.deviceControl.connectionController.iconTintColor = .black
+    castStyle.castViews.deviceControl.connectionController.headingTextColor = .black
+    castStyle.castViews.deviceControl.connectionController.bodyTextColor = .black
+    
+    // Device chooser style.
+    castStyle.castViews.deviceControl.deviceChooser.backgroundColor = .white
+    castStyle.castViews.deviceControl.deviceChooser.iconTintColor = .black
+    castStyle.castViews.deviceControl.deviceChooser.headingTextColor = .black
+    castStyle.castViews.deviceControl.deviceChooser.captionTextColor = .black
+    
+    // Apply also to visible casting views, with the new style.
+    castStyle.apply()
+  }
 }
 
