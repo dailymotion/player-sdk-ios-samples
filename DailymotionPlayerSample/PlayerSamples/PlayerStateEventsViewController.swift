@@ -81,7 +81,7 @@ class PlayerStateEventsViewController: DailymotionBaseViewController {
             guard let self = self else {
                 return
             }
-            activityIndicator.isHidden = true
+            self.activityIndicator.isHidden = true
             // Checking first if the createPlayer returned an error
             if let error = error {
                 self.handlePlayerError(error: error)
