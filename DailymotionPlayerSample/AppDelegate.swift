@@ -44,8 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         
         UINavigationBar.appearance().titleTextAttributes = attrs
-        AppDelegate.customizeChromeCastControllersAppearance()
         Dailymotion.setupDailymotionChromecast()
+        AppDelegate.customizeChromeCastControllersAppearance()
         return true
     }
     
@@ -64,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   
   private static func customizeChromeCastControllersAppearance() {
+    GCKCastContext.sharedInstance().useDefaultExpandedMediaControls = true
     // Get the shared instance of GCKUIStyle
     let castStyle = GCKUIStyle.sharedInstance()
     
