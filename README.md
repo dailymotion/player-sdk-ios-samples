@@ -8,7 +8,7 @@
 
 
 ## Full SDK Documentation
- [https://developers.dailymotion.com/player#embed-mobile-ios](https://developers.dailymotion.com/player#embed-mobile-ios)
+ [https://developers.dailymotion.com/sdk/player-sdk/ios](https://developers.dailymotion.com/sdk/player-sdk/ios)
 
 ## SDK Installation
 [https://github.com/dailymotion/player-sdk-ios/](https://github.com/dailymotion/player-sdk-ios)
