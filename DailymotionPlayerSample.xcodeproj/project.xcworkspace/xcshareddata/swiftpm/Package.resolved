@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dailymotion/player-sdk-ios",
       "state" : {
-        "branch" : "alpha",
-        "revision" : "ddbb9bf524ca4fba81607eba22af3080733308cf"
+        "branch" : "beta",
+        "revision" : "b13c5ef667526f0e7a802259949944ce5704dae0"
       }
     }
   ],
