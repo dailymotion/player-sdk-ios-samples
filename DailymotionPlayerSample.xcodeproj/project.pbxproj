@@ -466,8 +466,7 @@
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "${PRODUCT_NAME} uses the bluetooth to discover Cast-enabled devices around you.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -507,8 +506,7 @@
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "${PRODUCT_NAME} uses the bluetooth to discover Cast-enabled devices around you.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
