@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hml-o2-2NO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hml-o2-2NO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,15 +25,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SampleSelectionViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c51-Oq-X1H">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="747"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krE-Iq-MRD">
-                                <rect key="frame" x="0.0" y="747" width="393" height="50"/>
+                                <rect key="frame" x="0.0" y="668" width="393" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-dI-dJm">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
@@ -97,7 +97,7 @@
             <objects>
                 <viewController id="YXc-bb-VP0" customClass="BasicEmbedViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ea-dz-5wn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iph-hZ-wKj">
@@ -116,7 +116,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zER-XL-nIi" userLabel="Placeholder View">
-                                <rect key="frame" x="16" y="306" width="361" height="546"/>
+                                <rect key="frame" x="16" y="306" width="361" height="467"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Title" translatesAutoresizingMaskIntoConstraints="NO" id="i3i-kL-W64">
                                         <rect key="frame" x="0.0" y="16" width="361" height="72"/>
@@ -131,16 +131,16 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Photo" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-IB-RFh">
-                                        <rect key="frame" x="0.0" y="192" width="361" height="194"/>
+                                        <rect key="frame" x="0.0" y="192" width="361" height="115"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Subtitle" translatesAutoresizingMaskIntoConstraints="NO" id="6mt-QI-9nG">
-                                        <rect key="frame" x="0.0" y="402" width="361" height="8"/>
+                                        <rect key="frame" x="0.0" y="323" width="361" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="w9V-fl-KfF"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Pharagraph" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-vG-Uir">
-                                        <rect key="frame" x="0.0" y="426" width="361" height="102"/>
+                                        <rect key="frame" x="0.0" y="347" width="361" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="Lxl-nS-bW6"/>
                                         </constraints>
@@ -194,7 +194,7 @@
             <objects>
                 <viewController id="Sfp-nI-IYX" customClass="AdvertisingViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CCC-7k-dBp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csw-dx-fG6">
@@ -213,7 +213,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIQ-p1-G8r" userLabel="Placeholder View">
-                                <rect key="frame" x="16" y="306" width="361" height="546"/>
+                                <rect key="frame" x="16" y="306" width="361" height="467"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Title" translatesAutoresizingMaskIntoConstraints="NO" id="dhD-bF-5ky">
                                         <rect key="frame" x="0.0" y="16" width="361" height="72"/>
@@ -228,16 +228,16 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Photo" translatesAutoresizingMaskIntoConstraints="NO" id="9sG-DR-chM">
-                                        <rect key="frame" x="0.0" y="192" width="361" height="194"/>
+                                        <rect key="frame" x="0.0" y="192" width="361" height="115"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Subtitle" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-PY-dqd">
-                                        <rect key="frame" x="0.0" y="402" width="361" height="8"/>
+                                        <rect key="frame" x="0.0" y="323" width="361" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="5GA-zV-eHC"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Pharagraph" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-HO-gmu">
-                                        <rect key="frame" x="0.0" y="426" width="361" height="102"/>
+                                        <rect key="frame" x="0.0" y="347" width="361" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="8T8-v0-MNV"/>
                                         </constraints>
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ca1-RN-GdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1802.2900763358778" y="7.746478873239437"/>
+            <point key="canvasLocation" x="-2636" y="8"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="c7l-Kl-pvq">
@@ -335,15 +335,15 @@
             <objects>
                 <viewController id="FLe-Bc-Qyy" customClass="VerticalPlayerViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOZ-Ku-8ui">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-D5-vIj">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="636"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-3f-5JE">
-                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <rect key="frame" x="178" y="368" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
@@ -373,7 +373,7 @@
             <objects>
                 <viewController id="4Un-fd-Kda" customClass="LivePlayerViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L65-EU-hMH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xln-Lx-s6P">
@@ -392,7 +392,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsM-vP-2Qg" userLabel="Placeholder View">
-                                <rect key="frame" x="16" y="306" width="361" height="546"/>
+                                <rect key="frame" x="16" y="306" width="361" height="467"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Title" translatesAutoresizingMaskIntoConstraints="NO" id="fV4-AR-8d3">
                                         <rect key="frame" x="0.0" y="16" width="361" height="72"/>
@@ -407,16 +407,16 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-Kf-yAx">
-                                        <rect key="frame" x="0.0" y="192" width="361" height="194"/>
+                                        <rect key="frame" x="0.0" y="192" width="361" height="115"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Subtitle" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-RL-asr">
-                                        <rect key="frame" x="0.0" y="402" width="361" height="8"/>
+                                        <rect key="frame" x="0.0" y="323" width="361" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="iDn-hJ-xQ1"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Pharagraph" translatesAutoresizingMaskIntoConstraints="NO" id="FT0-j7-hHS">
-                                        <rect key="frame" x="0.0" y="426" width="361" height="102"/>
+                                        <rect key="frame" x="0.0" y="347" width="361" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="FVe-v6-3AA"/>
                                         </constraints>
@@ -470,7 +470,7 @@
             <objects>
                 <viewController id="hYy-6y-PU6" customClass="PlayerMethodsViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bnB-gv-b6w">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPj-Ly-cze">
@@ -595,7 +595,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-TH-5QH" userLabel="Placeholder">
-                                <rect key="frame" x="0.0" y="384" width="393" height="468"/>
+                                <rect key="frame" x="0.0" y="384" width="393" height="389"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Methods_First" translatesAutoresizingMaskIntoConstraints="NO" id="Wqj-3O-h8F">
                                         <rect key="frame" x="12" y="16" width="369" height="44"/>
@@ -610,7 +610,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_Methods_Third" translatesAutoresizingMaskIntoConstraints="NO" id="smH-T4-xUR">
-                                        <rect key="frame" x="12" y="136" width="369" height="332"/>
+                                        <rect key="frame" x="12" y="136" width="369" height="253"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -658,7 +658,7 @@
             <objects>
                 <viewController id="NW9-Ve-hoU" customClass="PlayerStateEventsViewController" customModule="DailymotionPlayerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzH-E6-QO4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-OS-d6o">
@@ -678,7 +678,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0O-2w-Obg">
-                                <rect key="frame" x="0.0" y="340" width="393" height="512"/>
+                                <rect key="frame" x="0.0" y="340" width="393" height="433"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jQd-zO-X8M">
                                         <rect key="frame" x="16" y="16" width="361.33333333333331" height="44"/>
@@ -720,7 +720,7 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-04-VkK">
-                                        <rect key="frame" x="0.0" y="76" width="393" height="436"/>
+                                        <rect key="frame" x="0.0" y="76" width="393" height="357"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">748] PLAYER_VIEWABILITYCHANGE
 751] PLAYER_VIDEOCHANGE
@@ -776,6 +776,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMg-Ai-yfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="525.95419847328242" y="753.52112676056345"/>
+        </scene>
+        <!--Root Container View Controller-->
+        <scene sceneID="clb-vg-feP">
+            <objects>
+                <viewController storyboardIdentifier="RootContainerViewController" id="fDH-pX-oQU" customClass="RootContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wwQ-Ep-yBR"/>
+                        <viewControllerLayoutGuide type="bottom" id="gOc-L5-Ft7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bu0-Vr-AxH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JA8-aM-xzY">
+                                <rect key="frame" x="0.0" y="773" width="393" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="eOR-eN-GRH"/>
+                                </constraints>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pg-YL-TLt">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="773"/>
+                                <connections>
+                                    <segue destination="Asb-1E-i35" kind="embed" identifier="NavigationVCEmbedSegue" id="bgS-7u-dMj"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="etZ-F1-cJb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9pg-YL-TLt" firstAttribute="width" secondItem="bu0-Vr-AxH" secondAttribute="width" id="BRb-LX-bEJ"/>
+                            <constraint firstItem="JA8-aM-xzY" firstAttribute="bottom" secondItem="gOc-L5-Ft7" secondAttribute="top" id="CIj-kT-vnM"/>
+                            <constraint firstItem="JA8-aM-xzY" firstAttribute="width" secondItem="bu0-Vr-AxH" secondAttribute="width" id="HcQ-br-ccj"/>
+                            <constraint firstItem="JA8-aM-xzY" firstAttribute="top" secondItem="9pg-YL-TLt" secondAttribute="bottom" id="Hy1-VQ-J2z"/>
+                            <constraint firstItem="9pg-YL-TLt" firstAttribute="top" secondItem="bu0-Vr-AxH" secondAttribute="topMargin" id="Mek-rK-jzN"/>
+                            <constraint firstItem="9pg-YL-TLt" firstAttribute="centerX" secondItem="bu0-Vr-AxH" secondAttribute="centerX" id="W5H-wm-iBq"/>
+                            <constraint firstItem="JA8-aM-xzY" firstAttribute="centerX" secondItem="bu0-Vr-AxH" secondAttribute="centerX" id="cFp-Xw-OtH"/>
+                            <constraint firstItem="9pg-YL-TLt" firstAttribute="top" secondItem="bu0-Vr-AxH" secondAttribute="top" id="l65-R3-apZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mek-rK-jzN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Mek-rK-jzN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="_miniMediaControlsContainerView" destination="JA8-aM-xzY" id="kgA-K4-Ynp"/>
+                        <outlet property="_miniMediaControlsHeightConstraint" destination="eOR-eN-GRH" id="aC0-gv-J9t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hf9-bS-q1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1755" y="8"/>
         </scene>
     </scenes>
     <resources>

@@ -14,9 +14,14 @@ class SampleSelectionViewController: DailymotionBaseViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        appDelegate?.isCastControlBarsEnabled = true
+    }
+    
     func setupView() {
         let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-        appVersionLabel.text = "App v\(buildNumber)"
+        appVersionLabel.text = "App v\(buildNumber)_beta"
         SDKVersionLabel.text = "SDK v\(DailymotionPlayer.sdkVersion)"
         overrideUserInterfaceStyle = .light
         title = NSLocalizedString("SampleScreenSelectionTitle", comment: "")
@@ -25,9 +30,10 @@ class SampleSelectionViewController: DailymotionBaseViewController {
         tableView.register(UINib(nibName: SampleSelectionHeaderFooterView.headerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: SampleSelectionHeaderFooterView.headerIdentifier)
         tableView.register(UINib(nibName: SampleSelectionTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: SampleSelectionTableViewCell.cellIdentifier)
         tableView.separatorStyle = .none
-        
         tableView.reloadData()
     }
+  
+  
     
 }
 

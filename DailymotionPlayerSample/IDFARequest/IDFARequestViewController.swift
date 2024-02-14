@@ -51,7 +51,7 @@ class IDFARequestViewController: UIViewController {
     }
     
     func navigateToMain() {
-        let mainNav = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainNavigation") as? UINavigationController
+        let mainNav = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootContainerViewController")
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let window = windowScene.windows.first else {
             return
