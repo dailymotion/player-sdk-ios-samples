@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.dailymotion.sample.player</key>
+		<string>Dailymotion Sample In-House</string>
+		<key>com.dailymotion.sample.player.beta</key>
+		<string>Dailymotion Sample In-House Beta</string>
+		<key>com.dailymotion.sample.player.alpha</key>
+		<string>Dailymotion Sample In-House Alpha</string>
+	</dict>
+</dict>
+</plist>
