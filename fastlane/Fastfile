@@ -27,8 +27,8 @@ platform :ios do
     puts 'Increment version number in TEST APP'
     increment_version_number_in_xcodeproj(
       bump_type: "#{bump_type}",
-      xcodeproj: './DailymotionPlayerSDKTestAPP/DailymotionPlayerSDKTestAPP.xcodeproj',
-      target: 'DailymotionPlayerSDKTestAPP'
+      xcodeproj: './DailymotionPlayerSample.xcodeproj',
+      target: 'DailymotionPlayerSample'
     )
     puts SharedValues::VERSION_NUMBER
   end
@@ -38,14 +38,14 @@ platform :ios do
     target = options[:target]
 
     version = get_version_number(
-      xcodeproj: './DailymotionPlayerSDKTestAPP/DailymotionPlayerSDKTestAPP.xcodeproj',
+      xcodeproj: './DailymotionPlayerSample.xcodeproj',
       configuration: target,
-      target: "DailymotionPlayerSDKTestAPP"
+      target: "DailymotionPlayerSample"
     )
 
     commit_version_bump(
      message: "Sample App Version Bump to beta_v#{version}",
-     xcodeproj: "./DailymotionPlayerSDKTestAPP/DailymotionPlayerSDKTestAPP.xcodeproj",
+     xcodeproj: "./DailymotionPlayerSample.xcodeproj",
      force: true
     )
     push_to_git_remote
