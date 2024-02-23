@@ -395,7 +395,7 @@
 		54408E102B8759D4006FBC59 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconBeta;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailymotionPlayerSample/DailymotionPlayerSampleRelease.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -406,7 +406,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_Beta=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
+				INFOPLIST_KEY_CFBundleDisplayName = "ßPlayerSDKSample";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -494,7 +494,7 @@
 		54408E122B8759DC006FBC59 /* Alpha */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAlpha;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailymotionPlayerSample/DailymotionPlayerSampleRelease.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -505,7 +505,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_Alpha=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
+				INFOPLIST_KEY_CFBundleDisplayName = "αPlayerSDKSample";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -654,7 +654,7 @@
 		549E903B2A9F254000DE98F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailymotionPlayerSample/DailymotionPlayerSampleDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -667,7 +667,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
+				INFOPLIST_KEY_CFBundleDisplayName = DevPlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -772,7 +772,7 @@
 			repositoryURL = "https://github.com/dailymotion/player-sdk-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.0;
+				minimumVersion = 1.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
