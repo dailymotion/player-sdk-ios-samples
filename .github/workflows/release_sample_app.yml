@@ -93,19 +93,23 @@ jobs:
        shell: bash
 
      - name: Sample App Release
+       env:
+         APP_CENTER_SECRET_ALPHA: ${{ secrets.APP_CENTER_SECRET_ALPHA }}
+         APP_CENTER_SECRET_BETA: ${{ secrets.APP_CENTER_SECRET_BETA }}
+         APP_CENTER_SECRET_PROD: ${{ secrets.APP_CENTER_SECRET_PROD }}
        run: |
          cd $(echo "${CI_MAIN_SDK_REPO_PATH}")
          env="alpha"
          target="Alpha"
          case ${{inputs.channel_type}} in
           stable)
-          env="prod" ; target="Prod"
+          env="prod" ; target="Prod" ; echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV 
           ;;
           beta)
-          env="beta" ; target="Beta"
+          env="beta" ; target="Beta" ; echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
           ;;
           alpha)
-          env="alpha" ; target="Alpha"
+          env="alpha" ; target="Alpha" ; echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV 
           ;;
           *)
           echo -n "Unknown release channel_type" ; exit 1
