@@ -103,13 +103,16 @@ jobs:
          target="Alpha"
          case ${{inputs.channel_type}} in
           stable)
-          env="prod" ; target="Prod" ; echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV 
+          env="prod" ; target="Prod"
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV 
           ;;
           beta)
-          env="beta" ; target="Beta" ; echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
+          env="beta" ; target="Beta"
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
           ;;
           alpha)
-          env="alpha" ; target="Alpha" ; echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV 
+          env="alpha" ; target="Alpha"
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV 
           ;;
           *)
           echo -n "Unknown release channel_type" ; exit 1
