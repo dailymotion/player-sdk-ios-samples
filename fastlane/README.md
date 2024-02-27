@@ -31,10 +31,10 @@ Description of what the lane does
 
 Description of what the lane does
 
-### ios TEST_APP_CREATE_RELEASE
+### ios SAMPLE_APP_CREATE_RELEASE
 
 ```sh
-[bundle exec] fastlane ios TEST_APP_CREATE_RELEASE
+[bundle exec] fastlane ios SAMPLE_APP_CREATE_RELEASE
 ```
 
 Description of what the lane does

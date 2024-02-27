@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		5412FE8E2AA1C6DA00A41D62 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5412FE8D2AA1C6DA00A41D62 /* MainNavigationController.swift */; };
 		5412FE902AA1D9DB00A41D62 /* DailymotionBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5412FE8F2AA1D9DB00A41D62 /* DailymotionBaseViewController.swift */; };
-		54408E152B8899F8006FBC59 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 54408E142B8899F8006FBC59 /* AppCenterAnalytics */; };
-		54408E172B8899F8006FBC59 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 54408E162B8899F8006FBC59 /* AppCenterCrashes */; };
-		54408E192B8899F8006FBC59 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = 54408E182B8899F8006FBC59 /* AppCenterDistribute */; };
+		54629A622B8DDFEA008A717B /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 54629A612B8DDFEA008A717B /* AppCenterAnalytics */; };
+		54629A642B8DDFEA008A717B /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 54629A632B8DDFEA008A717B /* AppCenterCrashes */; };
+		54629A662B8DDFEA008A717B /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = 54629A652B8DDFEA008A717B /* AppCenterDistribute */; };
 		5478DC2A2AA0B08700794C5A /* AdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478DC292AA0B08700794C5A /* AdvertisingViewController.swift */; };
 		5478DC2C2AA0B37700794C5A /* VerticalPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478DC2B2AA0B37700794C5A /* VerticalPlayerViewController.swift */; };
 		5478DC2E2AA0B38300794C5A /* LivePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478DC2D2AA0B38300794C5A /* LivePlayerViewController.swift */; };
@@ -84,9 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54408E192B8899F8006FBC59 /* AppCenterDistribute in Frameworks */,
-				54408E152B8899F8006FBC59 /* AppCenterAnalytics in Frameworks */,
-				54408E172B8899F8006FBC59 /* AppCenterCrashes in Frameworks */,
+				54629A662B8DDFEA008A717B /* AppCenterDistribute in Frameworks */,
+				54629A622B8DDFEA008A717B /* AppCenterAnalytics in Frameworks */,
+				54629A642B8DDFEA008A717B /* AppCenterCrashes in Frameworks */,
 				5478DC312AA0C63700794C5A /* DailymotionPlayerSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,9 +223,9 @@
 			name = DailymotionPlayerSample;
 			packageProductDependencies = (
 				5478DC302AA0C63700794C5A /* DailymotionPlayerSDK */,
-				54408E142B8899F8006FBC59 /* AppCenterAnalytics */,
-				54408E162B8899F8006FBC59 /* AppCenterCrashes */,
-				54408E182B8899F8006FBC59 /* AppCenterDistribute */,
+				54629A612B8DDFEA008A717B /* AppCenterAnalytics */,
+				54629A632B8DDFEA008A717B /* AppCenterCrashes */,
+				54629A652B8DDFEA008A717B /* AppCenterDistribute */,
 			);
 			productName = DailymotionPlayerSample;
 			productReference = 549E90262A9F253E00DE98F7 /* DailymotionPlayerSample.app */;
@@ -258,7 +258,7 @@
 			mainGroup = 549E901D2A9F253E00DE98F7;
 			packageReferences = (
 				5478DC2F2AA0C63700794C5A /* XCRemoteSwiftPackageReference "player-sdk-ios" */,
-				54408E132B8899F8006FBC59 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
+				54629A602B8DDFEA008A717B /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
 			);
 			productRefGroup = 549E90272A9F253E00DE98F7 /* Products */;
 			projectDirPath = "";
@@ -432,7 +432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dailymotion.sample.player.sdk.beta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -533,7 +533,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dailymotion.sample.player.sdk.alpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -698,7 +698,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dailymotion.sample.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -741,7 +741,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dailymotion.sample.player.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -785,7 +785,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		54408E132B8899F8006FBC59 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
+		54629A602B8DDFEA008A717B /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple.git";
 			requirement = {
@@ -804,19 +804,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		54408E142B8899F8006FBC59 /* AppCenterAnalytics */ = {
+		54629A612B8DDFEA008A717B /* AppCenterAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 54408E132B8899F8006FBC59 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			package = 54629A602B8DDFEA008A717B /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
 			productName = AppCenterAnalytics;
 		};
-		54408E162B8899F8006FBC59 /* AppCenterCrashes */ = {
+		54629A632B8DDFEA008A717B /* AppCenterCrashes */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 54408E132B8899F8006FBC59 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			package = 54629A602B8DDFEA008A717B /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
 			productName = AppCenterCrashes;
 		};
-		54408E182B8899F8006FBC59 /* AppCenterDistribute */ = {
+		54629A652B8DDFEA008A717B /* AppCenterDistribute */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 54408E132B8899F8006FBC59 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			package = 54629A602B8DDFEA008A717B /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
 			productName = AppCenterDistribute;
 		};
 		5478DC302AA0C63700794C5A /* DailymotionPlayerSDK */ = {

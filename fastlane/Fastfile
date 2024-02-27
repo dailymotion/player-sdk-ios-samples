@@ -55,11 +55,10 @@ platform :ios do
   end
 
   desc "Description of what the lane does"
-  lane :TEST_APP_CREATE_RELEASE do |options|
+  lane :SAMPLE_APP_CREATE_RELEASE do |options|
     TEST_APP_INCREMENT_VERSION_NUMBER(options)
     gym(archive_path: test_appderived_data_path, skip_profile_detection: true)
-    changelog = TEST_APP_GENERATE_CHANGELOG(options)
-    appcenter_upload(release_notes: changelog, dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH], file: lane_context[SharedValues::IPA_OUTPUT_PATH])
+    appcenter_upload(dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH], file: lane_context[SharedValues::IPA_OUTPUT_PATH])
   end
 
   def test_appderived_data_path
