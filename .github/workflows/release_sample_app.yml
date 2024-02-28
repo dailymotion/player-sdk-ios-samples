@@ -101,24 +101,28 @@ jobs:
          cd $(echo "${CI_MAIN_SDK_REPO_PATH}")
          env="alpha"
          target="Alpha"
+         apiToken=""
          case ${{inputs.channel_type}} in
           stable)
           env="prod" ; target="Prod"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV 
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV
+          apiToken=$APP_CENTER_SECRET_PROD
           ;;
           beta)
           env="beta" ; target="Beta"
           echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
+          apiToken=$APP_CENTER_SECRET_BETA
           ;;
           alpha)
           env="alpha" ; target="Alpha"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV 
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
+          apiToken=$APP_CENTER_SECRET_ALPHA
           ;;
           *)
           echo -n "Unknown release channel_type" ; exit 1
           ;;
          esac
-         echo "ENV $alpha, Target $Alpha"
+         echo "ENV $env, Target $target"
          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
-         bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
+         bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
        shell: bash  
