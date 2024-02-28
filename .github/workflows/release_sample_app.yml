@@ -119,5 +119,6 @@ jobs:
           ;;
          esac
          echo "ENV $alpha, Target $Alpha"
+         echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
          bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
        shell: bash  
