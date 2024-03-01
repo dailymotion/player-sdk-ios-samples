@@ -98,7 +98,7 @@ jobs:
          APP_CENTER_SECRET_BETA: ${{ secrets.APP_CENTER_SECRET_BETA }}
          APP_CENTER_SECRET_PROD: ${{ secrets.APP_CENTER_SECRET_PROD }}
        run: |
-         cd $(echo "${CI_MAIN_SDK_REPO_PATH}")
+         cd $(echo "${CI_MAIN_REPO_PATH}")
          env="alpha"
          target="Alpha"
          apiToken=""
