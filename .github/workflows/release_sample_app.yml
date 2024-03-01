@@ -92,29 +92,11 @@ jobs:
          ./main/ci_scripts/config_env.sh
        shell: bash
 
-     - name: Select Appcenter Secret
+     - name: Add Appcenter Secrets
        run: |
-         case ${{inputs.channel_type}} in
-          stable)
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV
-          ;;
-          beta)
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
-          ;;
-          alpha)
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
-          ;;
-          *)
-          echo -n "Unknown release channel_type" ; exit 1
-          ;;
-         esac
+         chmod +x ./main/ci_scripts/replace_sample_secret.sh
+         ./main/ci_scripts/replace_sample_secret.sh
        shell: bash
-
-     # - name: Add Appcenter Secrets
-     #   run: |
-     #     chmod +x ./main/ci_scripts/replace_sample_secret.sh
-     #     ./main/ci_scripts/replace_sample_secret.sh
-     #   shell: bash
 
      - name: Sample App Release
        env:
@@ -125,7 +107,6 @@ jobs:
          cd $(echo "${CI_MAIN_REPO_PATH}")
          env="alpha"
          target="Alpha"
-         apiToken=""
          case ${{inputs.channel_type}} in
           stable)
           env="prod" ; target="Prod"
