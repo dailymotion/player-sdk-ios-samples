@@ -38,6 +38,7 @@ jobs:
        uses: actions/checkout@v3
        with:
          path: main
+         token: ${{ secrets.GIT_TOKEN}}
 
      - name: Setup ENV VARS
        run: |
@@ -129,7 +130,7 @@ jobs:
          echo "AppDelegate secret replaced"
          sed -i '' -e "s/AppCenterSecretPLIST/appcenter-${apiToken}/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
          echo "Info.plist secret replaced"
-         
+
          echo "Start build"
          bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
 
