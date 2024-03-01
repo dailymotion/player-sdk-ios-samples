@@ -518,7 +518,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_Alpha=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "ßPlayerSDKSample";
+				INFOPLIST_KEY_CFBundleDisplayName = "αPlayerSDKSample";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -683,7 +683,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "ßPlayerSDKSample";
+				INFOPLIST_KEY_CFBundleDisplayName = DevPlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -726,7 +726,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_Prod=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailymotionPlayerSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "ßPlayerSDKSample";
+				INFOPLIST_KEY_CFBundleDisplayName = PlayerSDKSample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "DailymotionPlayerSample uses the local network to discover Cast-enabled devices on your WiFi\nnetwork.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
