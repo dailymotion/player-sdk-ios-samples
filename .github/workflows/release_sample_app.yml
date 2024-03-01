@@ -41,7 +41,7 @@ jobs:
 
      - name: Setup ENV VARS
        run: |
-         echo "CI_MAIN_SDK_REPO_PATH=$GITHUB_WORKSPACE/main" >> $GITHUB_ENV    
+         echo "CI_MAIN_REPO_PATH=$GITHUB_WORKSPACE/main" >> $GITHUB_ENV    
 
      - name: Install the Apple certificate and provisioning profile
        env:
@@ -92,31 +92,49 @@ jobs:
          ./main/ci_scripts/config_env.sh
        shell: bash
 
+     - name: Select Appcenter Secret
+       run: |
+         case ${{inputs.channel_type}} in
+          stable)
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV
+          ;;
+          beta)
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
+          ;;
+          alpha)
+          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
+          ;;
+          *)
+          echo -n "Unknown release channel_type" ; exit 1
+          ;;
+         esac
+       shell: bash
+
+     # - name: Add Appcenter Secrets
+     #   run: |
+     #     chmod +x ./main/ci_scripts/replace_sample_secret.sh
+     #     ./main/ci_scripts/replace_sample_secret.sh
+     #   shell: bash
+
      - name: Sample App Release
        env:
          APP_CENTER_SECRET_ALPHA: ${{ secrets.APP_CENTER_SECRET_ALPHA }}
          APP_CENTER_SECRET_BETA: ${{ secrets.APP_CENTER_SECRET_BETA }}
          APP_CENTER_SECRET_PROD: ${{ secrets.APP_CENTER_SECRET_PROD }}
        run: |
-         cd $(echo "${CI_MAIN_SDK_REPO_PATH}")
+         cd $(echo "${CI_MAIN_REPO_PATH}")
          env="alpha"
          target="Alpha"
          apiToken=""
          case ${{inputs.channel_type}} in
           stable)
           env="prod" ; target="Prod"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV
-          apiToken=$APP_CENTER_SECRET_PROD
           ;;
           beta)
           env="beta" ; target="Beta"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
-          apiToken=$APP_CENTER_SECRET_BETA
           ;;
           alpha)
           env="alpha" ; target="Alpha"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
-          apiToken=$APP_CENTER_SECRET_ALPHA
           ;;
           *)
           echo -n "Unknown release channel_type" ; exit 1
@@ -124,5 +142,5 @@ jobs:
          esac
          echo "ENV $env, Target $target"
          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
-         bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
+         bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:${APPCENTER_API_TOKEN} target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
        shell: bash  
