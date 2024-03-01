@@ -48,7 +48,7 @@ platform :ios do
      xcodeproj: "./DailymotionPlayerSample.xcodeproj",
      force: true
     )
-    push_to_git_remote
+    push_to_git_remote(force_with_lease: true)
     tag_name = "v#{version}_#{target}" 
     add_git_tag(tag: tag_name)
     push_git_tags(tag: tag_name)
