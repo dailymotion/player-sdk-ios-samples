@@ -99,10 +99,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureAppCenter() {
   #if CONFIGURATION_Debug
-      print("App center not started in debug")
+        NSLog("App center not started in debug")
+//      print("App center not started in debug")
   #else
-      AppCenter.start(withAppSecret: "<<AppCenterSecret>>", services: [Analytics.self, Crashes.self, Distribute.self])
-      print("Started Appcenter")
+      let secret = "<<AppCenterSecret>>"
+      AppCenter.start(withAppSecret: secret, services: [Analytics.self, Crashes.self, Distribute.self])
+        NSLog("App center started : \(secret)")
+//      print("Started Appcenter")
   #endif
     }
 }
