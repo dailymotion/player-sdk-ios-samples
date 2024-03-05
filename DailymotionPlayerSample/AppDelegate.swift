@@ -3,7 +3,7 @@ import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
 import AppCenterDistribute
-
+import os.log
 import DailymotionPlayerSDK
 import GoogleCast
 
@@ -99,12 +99,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureAppCenter() {
   #if CONFIGURATION_Debug
-        NSLog("App center not started in debug")
+        let osLog = OSLog(subsystem: "test.app.center" , category: "Sample Test")
+        os_log("%{public}s", log: osLog, type: .error, "App center not started in debug")
 //      print("App center not started in debug")
   #else
       let secret = "<<AppCenterSecret>>"
       AppCenter.start(withAppSecret: secret, services: [Analytics.self, Crashes.self, Distribute.self])
-        NSLog("App center started : \(secret)")
+        let osLog = OSLog(subsystem: "test.app.center" , category: "Sample Test")
+        os_log("%{public}s", log: osLog, type: .error, "Started Appcenter \(secret)")
 //      print("Started Appcenter")
   #endif
     }
