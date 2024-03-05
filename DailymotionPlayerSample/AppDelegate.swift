@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureAppCenter()
         let attrs = [
             NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: FontUtils.font(type: .DailySansBulky, size: 20)
@@ -51,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = attrs
         Dailymotion.setupDailymotionChromecast()
         AppDelegate.customizeChromeCastControllersAppearance()
-        configureAppCenter()
         return true
     }
     

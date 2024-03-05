@@ -1,4 +1,4 @@
-name: Release new Test App version
+name: Release new Sample App version
 run-name: 🚀 TestAPP ${{ github.actor }} started a new ${{inputs.version_bump_Type}} release in ${{inputs.channel_type}} channel 
 
 on: 
@@ -106,17 +106,14 @@ jobs:
          case ${{inputs.channel_type}} in
           stable)
           env="prod" ; target="Prod"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_PROD" >> $GITHUB_ENV
           apiToken=$APP_CENTER_SECRET_PROD
           ;;
           beta)
           env="beta" ; target="Beta"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_BETA" >> $GITHUB_ENV 
           apiToken=$APP_CENTER_SECRET_BETA
           ;;
           alpha)
           env="alpha" ; target="Alpha"
-          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
           apiToken=$APP_CENTER_SECRET_ALPHA
           ;;
           *)
@@ -135,10 +132,10 @@ jobs:
          bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
          echo "Build Finished"
          echo "Removing secrets"
-         sed -i '' -e "s/${apiToken}/<<AppCenterSecret>>/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
+         sed -i '' -e "s/${apiToken}/<<AppCenterSecret>>/g" $appDelegatePath
          echo "AppDelegate secret replaced"
-         sed -i '' -e "s/appcenter-${apiToken}/AppCenterSecretPLIST/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
+         sed -i '' -e "s/appcenter-${apiToken}/AppCenterSecretPLIST/g" $infoPlistPath
          echo "Info.plist secret replaced"
-         echo "Tag the version"
+         echo "Start Tag the version"
          bundle exec fastlane ios TEST_APP_GIT_TAG target:$target --verbose
        shell: bash  
