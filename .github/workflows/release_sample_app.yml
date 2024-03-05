@@ -126,20 +126,23 @@ jobs:
          echo "ENV $env, Target $target"
          echo "ApiToken chars: ${#apiToken}"
          echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
-         sed -i '' -e "s/<<AppCenterSecret>>/${apiToken}/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
-         echo "AppDelegate secret replaced"
-         sed -i '' -e "s/AppCenterSecretPLIST/appcenter-${apiToken}/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
-         echo "Info.plist secret replaced"
+         appDelegatePath=${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
+         infoPlistPath=${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
+         sed -i '' -e "s/<<AppCenterSecret>>/${apiToken}/g" $appDelegatePath
+         echo "AppDelegate at path ${appDelegatePath} secret replaced"
+         cat $appDelegatePath
+         sed -i '' -e "s/AppCenterSecretPLIST/appcenter-${apiToken}/g" $infoPlistPath
+         echo "Info.plist at path ${infoPlistPath} secret replaced"
+         cat $infoPlistPath
+         # echo "Start build"
+         # bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
 
-         echo "Start build"
-         bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
-
-         echo "Build Finished"
-         echo "Removing secrets"
-         sed -i '' -e "s/${apiToken}/<<AppCenterSecret>>/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
-         echo "AppDelegate secret replaced"
-         sed -i '' -e "s/appcenter-${apiToken}/AppCenterSecretPLIST/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
-         echo "Info.plist secret replaced"
-         echo "Tag the version"
-         bundle exec fastlane ios TEST_APP_GIT_TAG target:$target --verbose
+         # echo "Build Finished"
+         # echo "Removing secrets"
+         # sed -i '' -e "s/${apiToken}/<<AppCenterSecret>>/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
+         # echo "AppDelegate secret replaced"
+         # sed -i '' -e "s/appcenter-${apiToken}/AppCenterSecretPLIST/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
+         # echo "Info.plist secret replaced"
+         # echo "Tag the version"
+         # bundle exec fastlane ios TEST_APP_GIT_TAG target:$target --verbose
        shell: bash  
