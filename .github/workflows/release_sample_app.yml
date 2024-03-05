@@ -125,7 +125,8 @@ jobs:
          esac
          echo "ENV $env, Target $target"
          echo "ApiToken chars: ${#apiToken}"
-         echo "APPCENTER_API_TOKEN=$APP_CENTER_SECRET_ALPHA" >> $GITHUB_ENV
+         echo "apiToken1 $apiToken"
+         echo "apiToken2 ${apiToken}"
          appDelegatePath=${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
          infoPlistPath=${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
          sed -i '' -e "s/<<AppCenterSecret>>/${apiToken}/g" $appDelegatePath
