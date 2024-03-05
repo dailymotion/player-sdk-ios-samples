@@ -100,15 +100,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureAppCenter() {
   #if CONFIGURATION_Debug
-        let osLog = OSLog(subsystem: "test.app.center" , category: "Sample Test")
-        os_log("%{public}s", log: osLog, type: .error, "App center not started in debug")
-//      print("App center not started in debug")
+      print("AppCenter not started in debug")
   #else
-      let secret = "<<AppCenterSecret>>"
-      AppCenter.start(withAppSecret: secret, services: [Analytics.self, Crashes.self, Distribute.self])
-        let osLog = OSLog(subsystem: "test.app.center" , category: "Sample Test")
-        os_log("%{public}s", log: osLog, type: .error, "Started Appcenter \(secret)")
-//      print("Started Appcenter")
+      AppCenter.start(withAppSecret: "<<AppCenterSecret>>", services: [Analytics.self, Crashes.self, Distribute.self])
+      print("AppCenter Started")
   #endif
     }
 }

@@ -129,13 +129,10 @@ jobs:
          infoPlistPath=${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/Info.plist
          sed -i '' -e "s/<<AppCenterSecret>>/${apiToken}/g" $appDelegatePath
          echo "AppDelegate at path ${appDelegatePath} secret replaced"
-         cat $appDelegatePath
          sed -i '' -e "s/AppCenterSecretPLIST/appcenter-${apiToken}/g" $infoPlistPath
          echo "Info.plist at path ${infoPlistPath} secret replaced"
-         cat $infoPlistPath
          echo "Start build"
          bundle exec fastlane ios SAMPLE_APP_CREATE_RELEASE api_token:$apiToken target:$target bump_type:${{ inputs.version_bump_Type }} --env $env --verbose
-
          echo "Build Finished"
          echo "Removing secrets"
          sed -i '' -e "s/${apiToken}/<<AppCenterSecret>>/g" ${CI_MAIN_REPO_PATH}/DailymotionPlayerSample/AppDelegate.swift
