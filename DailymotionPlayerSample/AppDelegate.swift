@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = attrs
         Dailymotion.setupDailymotionChromecast()
         AppDelegate.customizeChromeCastControllersAppearance()
+        configureAppCenter()
         return true
     }
     
@@ -106,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let secret = "<<AppCenterSecret>>"
       AppCenter.start(withAppSecret: secret, services: [Analytics.self, Crashes.self, Distribute.self])
         let osLog = OSLog(subsystem: "test.app.center" , category: "Sample Test")
-        os_log("%{public}s", log: osLog, type: .error, "Started Appcenter \(secret)")
+        os_log("%{public}s", log: osLog, type: .error, "Started Appcenter ")
 //      print("Started Appcenter")
   #endif
     }
