@@ -20,8 +20,7 @@ class SampleSelectionViewController: DailymotionBaseViewController {
     }
     
     func setupView() {
-        let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-        appVersionLabel.text = "App v\(buildNumber)"
+        appVersionLabel.text = "App v\(appVersion())"
         SDKVersionLabel.text = "SDK v\(DailymotionPlayer.sdkVersion)"
         overrideUserInterfaceStyle = .light
         title = NSLocalizedString("SampleScreenSelectionTitle", comment: "")
@@ -32,8 +31,23 @@ class SampleSelectionViewController: DailymotionBaseViewController {
         tableView.separatorStyle = .none
         tableView.reloadData()
     }
-  
-  
+    
+    func appVersion() -> String {
+        var appVersionString = "1.0.0_Default"
+        let sdkBundle = Bundle.main
+        if let sdkVersion = sdkBundle.infoDictionary?["CFBundleShortVersionString"] as? String {
+            appVersionString = sdkVersion
+        }
+#if CONFIGURATION_Beta
+        appVersionString += "_beta"
+#elseif CONFIGURATION_Alpha
+        appVersionString += "_alpha"
+#elseif CONFIGURATION_Debug
+        appVersionString += "_debug"
+#endif
+        
+        return appVersionString
+    }
     
 }
 

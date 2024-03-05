@@ -1,0 +1,67 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  
+  desc "Description of what the lane does"
+  lane :TEST_APP_INCREMENT_VERSION_NUMBER do |options|
+    bump_type = options[:bump_type]
+    if bump_type.nil? || bump_type.empty?
+      puts 'No bump_type specified, choose between : patch, minor, major'
+      next
+    end
+    puts 'Increment version number in TEST APP'
+    increment_version_number_in_xcodeproj(
+      bump_type: "#{bump_type}",
+      xcodeproj: './DailymotionPlayerSample.xcodeproj',
+      target: 'DailymotionPlayerSample'
+    )
+    puts SharedValues::VERSION_NUMBER
+  end
+
+  desc "Description of what the lane does"
+  lane :TEST_APP_GIT_TAG do |options|
+    target = options[:target]
+
+    version = get_version_number(
+      xcodeproj: './DailymotionPlayerSample.xcodeproj',
+      configuration: target,
+      target: "DailymotionPlayerSample"
+    )
+
+    commit_version_bump(
+     message: "Sample App Version Bump to beta_v#{version}",
+     xcodeproj: "./DailymotionPlayerSample.xcodeproj",
+     force: true
+    )
+    push_to_git_remote(force_with_lease: true)
+    tag_name = "v#{version}_#{target}" 
+    add_git_tag(tag: tag_name)
+    push_git_tags(tag: tag_name)
+  end
+
+  desc "Description of what the lane does"
+  lane :SAMPLE_APP_CREATE_RELEASE do |options|
+    TEST_APP_INCREMENT_VERSION_NUMBER(options)
+    gym(archive_path: test_appderived_data_path, skip_profile_detection: true)
+    appcenter_upload(api_token:options[:api_token], dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH], file: lane_context[SharedValues::IPA_OUTPUT_PATH])
+  end
+
+  def test_appderived_data_path
+    '/tmp/derivedData'
+  end
+end

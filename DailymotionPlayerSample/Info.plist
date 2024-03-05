@@ -5,8 +5,10 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>appcenter-152b941d-a609-4273-bd85-dde352044a1f</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>AppCenterSecretPLIST</string>
+			</array>
 		</dict>
 	</array>
 	<key>NSBonjourServices</key>
