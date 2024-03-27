@@ -40,6 +40,7 @@
 		54B6B8FC2AA0A80B0041BE87 /* ABCFavoritMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54B6B8F62AA0A80B0041BE87 /* ABCFavoritMono-Regular.otf */; };
 		54B6B8FF2AA0A8DB0041BE87 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6B8FE2AA0A8DB0041BE87 /* FontUtils.swift */; };
 		54E0E4D02B0CBCDF00F2E979 /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E0E4CF2B0CBCDF00F2E979 /* RootContainerViewController.swift */; };
+		A8C2A6892BB40B9800DB242E /* PlayerStateEventButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A6882BB40B9800DB242E /* PlayerStateEventButtonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		54E0E4CF2B0CBCDF00F2E979 /* RootContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
 		54E0E4D12B0CD71E00F2E979 /* DailymotionPlayerSampleDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailymotionPlayerSampleDebug.entitlements; sourceTree = "<group>"; };
 		54E0E4D22B0CD75200F2E979 /* DailymotionPlayerSampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailymotionPlayerSampleRelease.entitlements; sourceTree = "<group>"; };
+		A8C2A6882BB40B9800DB242E /* PlayerStateEventButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateEventButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		54B6B8EC2AA084940041BE87 /* PlayerSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A8C2A6872BB40B8700DB242E /* Model */,
 				54B6B8EE2AA084C60041BE87 /* BasicEmbedViewController.swift */,
 				5478DC292AA0B08700794C5A /* AdvertisingViewController.swift */,
 				5478DC2B2AA0B37700794C5A /* VerticalPlayerViewController.swift */,
@@ -203,6 +206,14 @@
 				54B6B8F22AA0A80B0041BE87 /* DailySans-Bulky.otf */,
 			);
 			path = SourceFiles;
+			sourceTree = "<group>";
+		};
+		A8C2A6872BB40B8700DB242E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8C2A6882BB40B9800DB242E /* PlayerStateEventButtonType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				5412FE902AA1D9DB00A41D62 /* DailymotionBaseViewController.swift in Sources */,
 				5478DC2E2AA0B38300794C5A /* LivePlayerViewController.swift in Sources */,
 				54B6B8FF2AA0A8DB0041BE87 /* FontUtils.swift in Sources */,
+				A8C2A6892BB40B9800DB242E /* PlayerStateEventButtonType.swift in Sources */,
 				54B522E72A9F78EB00861947 /* SampleSelectionHelper.swift in Sources */,
 				5478DC2C2AA0B37700794C5A /* VerticalPlayerViewController.swift in Sources */,
 				54B522E52A9F419E00861947 /* IDFARequestViewController.swift in Sources */,
