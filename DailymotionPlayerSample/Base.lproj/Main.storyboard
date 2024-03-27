@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hml-o2-2NO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hml-o2-2NO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,13 +39,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App v 1.2.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vx-VN-0TK">
-                                                <rect key="frame" x="163.66666666666666" y="0.0" width="66" height="25"/>
+                                                <rect key="frame" x="163.33333333333334" y="0.0" width="66.666666666666657" height="25"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Bold" family="ABC Favorit" pointSize="13"/>
                                                 <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK v 1.2.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84g-6L-Ccc">
-                                                <rect key="frame" x="163" y="25" width="67.333333333333314" height="25"/>
+                                                <rect key="frame" x="162" y="25" width="69" height="25"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Bold" family="ABC Favorit" pointSize="13"/>
                                                 <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -496,7 +496,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="74" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-iS-P6m">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="29.333333333333332"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="PlayPlayer"/>
                                                 <connections>
@@ -504,7 +504,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB1-1X-3Fc">
-                                                <rect key="frame" x="0.0" y="28" width="74" height="16"/>
+                                                <rect key="frame" x="0.0" y="29.333333333333375" width="74" height="14.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Medium" family="ABC Favorit" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -515,7 +515,7 @@
                                         <rect key="frame" x="74" y="0.0" width="74" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3w-8z-XhB">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="32.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="PausePlayer"/>
                                                 <connections>
@@ -523,7 +523,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlg-eJ-bJn">
-                                                <rect key="frame" x="0.0" y="30.666666666666682" width="74" height="13.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="32.333333333333371" width="74" height="11.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Medium" family="ABC Favorit" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -534,7 +534,7 @@
                                         <rect key="frame" x="148" y="0.0" width="73.666666666666686" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjT-6H-oqF">
-                                                <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="30.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="32.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Seek10"/>
                                                 <connections>
@@ -542,7 +542,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkZ-5p-YDt">
-                                                <rect key="frame" x="0.0" y="30.666666666666682" width="73.666666666666671" height="13.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="32.333333333333371" width="73.666666666666671" height="11.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Medium" family="ABC Favorit" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -553,7 +553,7 @@
                                         <rect key="frame" x="221.66666666666663" y="0.0" width="74" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4u-U5-sHv">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="32.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="LoadPlayer"/>
                                                 <connections>
@@ -561,7 +561,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfi-4z-Bvf">
-                                                <rect key="frame" x="0.0" y="30.666666666666682" width="74" height="13.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="32.333333333333371" width="74" height="11.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Medium" family="ABC Favorit" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -573,7 +573,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jss-3s-FXH">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="29.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30.666666666666668"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="FullscreenPlayer"/>
                                                 <connections>
@@ -581,7 +581,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fullscreen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVE-yS-POo">
-                                                <rect key="frame" x="0.0" y="29.333333333333375" width="74" height="14.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="30.666666666666682" width="74" height="13.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="ABCFavorit-Medium" family="ABC Favorit" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -720,7 +720,7 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-04-VkK">
-                                        <rect key="frame" x="0.0" y="76" width="393" height="357"/>
+                                        <rect key="frame" x="16" y="76" width="361" height="285"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">748] PLAYER_VIEWABILITYCHANGE
 751] PLAYER_VIDEOCHANGE
@@ -738,15 +738,32 @@
                                         <fontDescription key="fontDescription" name="ABCFavoritMono-Regular" family="ABC Favorit Mono" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiP-N4-chM">
+                                        <rect key="frame" x="16" y="377" width="71.333333333333329" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eW7-rw-07u"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Trashcan" title="Clear">
+                                            <fontDescription key="titleFontDescription" name="ABCFavorit-Regular" family="ABC Favorit" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="stateLogsBtn:" destination="NW9-Ve-hoU" eventType="touchUpInside" id="wXN-8G-Jzu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="NiP-N4-chM" firstAttribute="top" secondItem="o2g-04-VkK" secondAttribute="bottom" constant="16" id="0Oi-ND-US5"/>
+                                    <constraint firstAttribute="bottom" secondItem="NiP-N4-chM" secondAttribute="bottom" constant="16" id="8C0-6T-JTc"/>
                                     <constraint firstItem="jQd-zO-X8M" firstAttribute="top" secondItem="k0O-2w-Obg" secondAttribute="top" constant="16" id="CIp-zO-WCt"/>
                                     <constraint firstItem="jQd-zO-X8M" firstAttribute="leading" secondItem="k0O-2w-Obg" secondAttribute="leading" constant="16" id="Ex3-M7-Ct9"/>
-                                    <constraint firstAttribute="trailing" secondItem="o2g-04-VkK" secondAttribute="trailing" id="Tcb-Kb-PBw"/>
+                                    <constraint firstAttribute="trailing" secondItem="o2g-04-VkK" secondAttribute="trailing" constant="16" id="Tcb-Kb-PBw"/>
+                                    <constraint firstItem="NiP-N4-chM" firstAttribute="leading" secondItem="o2g-04-VkK" secondAttribute="leading" id="Yr0-7B-oCf"/>
                                     <constraint firstAttribute="trailing" secondItem="jQd-zO-X8M" secondAttribute="trailing" constant="16" id="cmZ-rL-cM4"/>
-                                    <constraint firstItem="o2g-04-VkK" firstAttribute="leading" secondItem="k0O-2w-Obg" secondAttribute="leading" id="eeU-Hh-mzv"/>
-                                    <constraint firstAttribute="bottom" secondItem="o2g-04-VkK" secondAttribute="bottom" id="keO-4j-PBC"/>
+                                    <constraint firstItem="o2g-04-VkK" firstAttribute="leading" secondItem="k0O-2w-Obg" secondAttribute="leading" constant="16" id="eeU-Hh-mzv"/>
                                     <constraint firstItem="o2g-04-VkK" firstAttribute="top" secondItem="jQd-zO-X8M" secondAttribute="bottom" constant="16" id="w7e-i6-198"/>
                                 </constraints>
                             </view>
@@ -771,6 +788,7 @@
                         <outlet property="playerContainerView" destination="ol6-OS-d6o" id="SM0-ZL-oKE"/>
                         <outlet property="stateBtn" destination="LDi-lx-BWT" id="Joi-iq-P9D"/>
                         <outlet property="stateEventsViewContainer" destination="k0O-2w-Obg" id="k04-zp-waE"/>
+                        <outlet property="stateLogsBtn" destination="NiP-N4-chM" id="37O-nJ-BjC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMg-Ai-yfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -850,6 +868,7 @@
         <image name="PlayPlayer" width="12" height="14"/>
         <image name="Seek10" width="24" height="24"/>
         <image name="TabSelected" width="172" height="44"/>
+        <image name="Trashcan" width="20" height="21"/>
         <image name="Wordmark" width="132" height="21"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

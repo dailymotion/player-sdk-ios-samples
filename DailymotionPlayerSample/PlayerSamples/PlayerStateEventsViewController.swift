@@ -10,18 +10,25 @@ import DailymotionPlayerSDK
 import Combine
 
 class PlayerStateEventsViewController: DailymotionBaseViewController {
-    
     @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var stateEventsViewContainer: UIView!
     @IBOutlet weak var eventsBtn: UIButton!
     @IBOutlet weak var stateBtn: UIButton!
     @IBOutlet weak var eventsStateTextView: UITextView!
+    @IBOutlet weak var stateLogsBtn: UIButton!
+    
     var playerView: DMPlayerView?
     var dailymotionEvents: [String] = []
     var textViewAutoScroll = false
     var lastTextViewContentOffset: CGFloat = 0
-    
+    var stateLogsBtnType: PlayerStateEventButtonType = .clear {
+        didSet {
+            stateLogsBtn.setTitle(stateLogsBtnType.title, for: .normal)
+            stateLogsBtn.setImage(stateLogsBtnType.image, for: .normal)
+        }
+    }
+
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -30,6 +37,7 @@ class PlayerStateEventsViewController: DailymotionBaseViewController {
         initPlayer()
         setupView()
         // Do any additional setup after loading the view.
+        stateLogsBtnType = .clear
     }
     
     // MARK: @IBActions
@@ -44,17 +52,36 @@ class PlayerStateEventsViewController: DailymotionBaseViewController {
         }
         eventsStateTextView.text = eventsText
         scrollToBottom()
+        stateLogsBtnType = .clear
     }
     
     @IBAction func stateBtn(_ sender: UIButton) {
         stateBtn.isSelected = true
         eventsBtn.isSelected = false
         eventsStateTextView.text = ""
-        playerView?.getState(completion: { state in
-            self.eventsStateTextView.text = state?.description
+        playerView?.getState(completion: { [weak self] state in
+            self?.eventsStateTextView.text = state?.description
         })
+        stateLogsBtnType = .refresh
     }
-    
+
+    @IBAction func stateLogsBtn(_ sender: Any) {
+        switch stateLogsBtnType {
+        case .clear:
+            dailymotionEvents.removeAll()
+            clearOutputView()
+        case .refresh:
+            clearOutputView()
+            playerView?.getState(completion: { [weak self] state in
+                self?.eventsStateTextView.text = state?.description
+            })
+        }
+    }
+
+    func clearOutputView() {
+        eventsStateTextView.text = nil
+    }
+
     // MARK: Setup
     
     func setupView() {
@@ -67,6 +94,10 @@ class PlayerStateEventsViewController: DailymotionBaseViewController {
         eventsBtn.isSelected = true
         stateBtn.isSelected = false
         eventsStateTextView.delegate = self
+
+        stateLogsBtn.layer.cornerRadius = 12
+        stateLogsBtn.layer.borderWidth = 2
+        stateLogsBtn.layer.borderColor = UIColor.black.cgColor
     }
     
     func initPlayer() {
