@@ -59,7 +59,7 @@ platform :ios do
     TEST_APP_INCREMENT_VERSION_NUMBER(options)
     gym(
       scheme: "DailymotionPlayerSample",
-      output_directory: "./main/build",
+      output_directory: "./build",
       output_name: "SampleApp.ipa",
       skip_profile_detection: true,
       clean: true
