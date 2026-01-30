@@ -25,7 +25,7 @@ on:
 
 jobs:
   release-new-sample-app-version:
-    runs-on: macos-13
+    runs-on: macos-15
 
     if: always() && !cancelled() && !contains(needs.*.result, 'failure')
 
